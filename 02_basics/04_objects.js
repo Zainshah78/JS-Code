@@ -32,7 +32,7 @@ const obj2 = {3: "c", 4: "d"}
 // console.log(obj3); //  { '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
 
 const obj3 = {...obj1, ...obj2}
-console.log(obj3);  //  { '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
+//console.log(obj3);  //  { '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
 
 const users = [
     {name: "zain",
@@ -40,11 +40,24 @@ const users = [
     }
 ]
 
-console.log(users[0].email);
-console.log(tinderUser);
+// console.log(users[0].email);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+// console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+
+
+const course = {
+    courseName: "JS-basics",
+    price: 999,
+    courseInstructor: "Hitesh"
+}
+
+// course.courseInstructor
+
+const {courseInstructor: instructor} = course
+
+console.log(instructor);
