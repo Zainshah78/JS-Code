@@ -10,6 +10,8 @@
 
 ```javascript
 
+// Color Changer
+
 const button = document.querySelectorAll('.button')
 const body = document.querySelector('body')
 
@@ -42,6 +44,7 @@ button.forEach( function(button) {
 
 ```javascript
 
+// BMI Calculator
 
 const form = document.querySelector('form') 
 
@@ -65,3 +68,25 @@ form.addEventListener('submit', function(e){
 
 });
 
+```
+
+
+## project 3 solution
+
+``` javascript
+
+// Digital Clock
+
+const clock = document.getElementById('clock');
+//const clock = document.querySelector('#clock')
+
+setInterval(
+  function () {
+    let date = new Date();
+    //console.log(date.toLocaleTimeString());
+    clock.innerHTML = date.toLocaleTimeString()
+  },
+  1000);
+ 
+
+```
