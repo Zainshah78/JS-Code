@@ -8,6 +8,8 @@
 
 ## project 1
 
+```javascript
+
 const button = document.querySelectorAll('.button')
 const body = document.querySelector('body')
 
@@ -30,4 +32,36 @@ button.forEach( function(button) {
       body.style.backgroundColor = e.target.id
     }
   })
-} )
+} );
+
+
+```
+
+
+## project 2 solution
+
+```javascript
+
+
+const form = document.querySelector('form') 
+
+form.addEventListener('submit', function(e){
+  e.preventDefault()
+
+  const height = parseInt(document.querySelector('#height').value)
+  const weight = parseInt(document.querySelector('#height').value)
+  const results = (document.querySelector('#results'))
+
+  if (height === '' || height < 0 || isNaN(height)) {
+    results.innerHTML = `Please give a valid height ${height}`;
+  } else if (weight === '' || weight < 0 || isNaN(weight)) {
+    results.innerHTML = `Please give a valid weight ${weight}`;
+  } else {
+    const BMI = (weight / ((height * height) / 10000)).toFixed(2)
+    //show the result
+    results.innerHTML = `<span>${BMI}</span>`
+  }
+
+
+});
+
