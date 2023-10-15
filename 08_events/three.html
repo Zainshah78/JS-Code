@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+
+    <h1>Chai aur javascript</h1>
+    <button id="start">start</button>
+    <button id="stop">Stop</button>
+    
+</body>
+
+<script>
+
+    const sayDate = function(str){
+        console.log(str, Date.now());
+    }
+
+    const intervalid = setInterval(sayDate, 1000, "hey")
+
+    clearInterval(intervalid)
+
+    
+    // *****************************************************************************************/
+   
+    
+    let startButton;
+
+    const startPrinting = function(){
+        console.log('Clicked start button');
+        startButton = setInterval(function(){
+            console.log('Hey,Zain!', Date.now());
+        }, 2000);
+
+        console.log(startButton);
+        
+    }
+
+    const stopButton = function(){
+        console.log('clicked stop button');
+        clearInterval(startButton);
+    }
+
+    document.querySelector('#start').addEventListener('click', startPrinting)
+
+    document.querySelector('#stop').addEventListener('click', stopButton) 
+    
+</script>
+    
+</html>
